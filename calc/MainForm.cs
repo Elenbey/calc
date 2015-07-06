@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace calc
@@ -14,31 +15,41 @@ namespace calc
             double firstValue = Convert.ToDouble(ValueOneInput.Text);
             double secondValue = Convert.ToDouble(ValueTwoInput.Text);
 
-            switch (senderName)
+
+            try
             {
-                case "MultiplyButton":
-                    calculateResult = firstValue * secondValue;
-                    break;
-                case "DivisionButton":
-                    if (secondValue == 0)
-                    {
-                        throw new Exception("Division by zero");
-                    }
+                switch (senderName)
+                {
+                    case "MultiplyButton":
+                        calculateResult = firstValue*secondValue;
+                        break;
+                    case "DivisionButton":
+                        if (secondValue == 0)
+                        {
 
-                    calculateResult = firstValue / secondValue;
-                    break;
+                            throw new Exception("Division by zero");
+                        }
 
-                case "AdditionButton":
-                    calculateResult = firstValue + secondValue;
-                    break;
+                        calculateResult = firstValue/secondValue;
+                        break;
 
-                case "SubstractionButton":
-                    calculateResult = firstValue - secondValue;
-                    break;
+                    case "AdditionButton":
+                        calculateResult = firstValue + secondValue;
+                        break;
 
-                default:
-                    throw new Exception("Unknown operation");
-                   
+                    case "SubstractionButton":
+                        calculateResult = firstValue - secondValue;
+                        break;
+
+                    default:
+                        throw new Exception("Unknown operation");
+
+                }
+            }
+            catch(Exception err)
+            {
+                OutputField.Text = err.Message.ToString();
+                return;
             }
 
             OutputField.Text = calculateResult.ToString();
