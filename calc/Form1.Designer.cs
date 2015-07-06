@@ -49,7 +49,7 @@
             this.InputLable.Size = new System.Drawing.Size(41, 16);
             this.InputLable.TabIndex = 0;
             this.InputLable.Text = "Input";
-            this.InputLable.Click += new System.EventHandler(this.InputLable_Click);
+            this.InputLable.Click += new System.EventHandler(this.InputLableClick);
             // 
             // InpValOne
             // 
@@ -57,7 +57,7 @@
             this.InpValOne.Name = "InpValOne";
             this.InpValOne.Size = new System.Drawing.Size(104, 20);
             this.InpValOne.TabIndex = 1;
-            this.InpValOne.TextChanged += new System.EventHandler(this.InpValOne_TextChanged);
+            this.InpValOne.TextChanged += new System.EventHandler(this.InpValOneTextChanged);
             // 
             // InpValTwo
             // 
@@ -65,7 +65,7 @@
             this.InpValTwo.Name = "InpValTwo";
             this.InpValTwo.Size = new System.Drawing.Size(100, 20);
             this.InpValTwo.TabIndex = 2;
-            this.InpValTwo.TextChanged += new System.EventHandler(this.InpValTwo_TextChanged);
+            this.InpValTwo.TextChanged += new System.EventHandler(this.InpValTwoTextChanged);
             // 
             // OutputLabel
             // 
@@ -84,7 +84,7 @@
             this.Output.Name = "Output";
             this.Output.Size = new System.Drawing.Size(237, 20);
             this.Output.TabIndex = 4;
-            this.Output.TextChanged += new System.EventHandler(this.Output_TextChanged);
+            this.Output.TextChanged += new System.EventHandler(this.OutputTextChanged);
             // 
             // ButtMltp
             // 
@@ -95,7 +95,7 @@
             this.ButtMltp.TabIndex = 5;
             this.ButtMltp.Text = "*";
             this.ButtMltp.UseVisualStyleBackColor = true;
-            this.ButtMltp.Click += new System.EventHandler(this.ButtMltp_Click);
+            this.ButtMltp.Click += new System.EventHandler(this.ButtMltpClick);
             // 
             // ButtDiv
             // 
@@ -106,7 +106,7 @@
             this.ButtDiv.TabIndex = 6;
             this.ButtDiv.Text = "/";
             this.ButtDiv.UseVisualStyleBackColor = true;
-            this.ButtDiv.Click += new System.EventHandler(this.ButtDiv_Click);
+            this.ButtDiv.Click += new System.EventHandler(this.ButtDivClick);
             // 
             // ButtAdd
             // 
@@ -117,7 +117,7 @@
             this.ButtAdd.TabIndex = 7;
             this.ButtAdd.Text = "+";
             this.ButtAdd.UseVisualStyleBackColor = true;
-            this.ButtAdd.Click += new System.EventHandler(this.ButtAdd_Click);
+            this.ButtAdd.Click += new System.EventHandler(this.ButtAddClick);
             // 
             // ButtSubr
             // 
@@ -128,7 +128,7 @@
             this.ButtSubr.TabIndex = 8;
             this.ButtSubr.Text = "-";
             this.ButtSubr.UseVisualStyleBackColor = true;
-            this.ButtSubr.Click += new System.EventHandler(this.ButtSubr_Click);
+            this.ButtSubr.Click += new System.EventHandler(this.ButtSubrClick);
             // 
             // Form1
             // 
@@ -145,6 +145,7 @@
             this.Controls.Add(this.InpValOne);
             this.Controls.Add(this.InputLable);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

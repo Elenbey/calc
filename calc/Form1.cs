@@ -12,8 +12,8 @@ namespace calc
 {
     public partial class Form1 : Form
     {
-        public double ValOne;
-        public double ValTwo;
+        public double ValueOne;
+        public double ValueTwo;
         public double Result;
 
         
@@ -22,63 +22,85 @@ namespace calc
             InitializeComponent();
         }
 
-        private void InputLable_Click(object sender, EventArgs e)
+        private void InputLableClick(object sender, EventArgs e)
         {
 
         }
 
-        private void InpValOne_TextChanged(object sender, EventArgs e)
+        private void InpValOneTextChanged(object sender, EventArgs e)
         {
             string input = InpValOne.Text;
             if (input.Length == 0)
-                this.ValOne = 0;
+            {
+                ValueOne = 0;
+            }
             else
-                this.ValOne =  Convert.ToDouble(input);
+            {
+                ValueOne = Convert.ToDouble(input);
+            }
+            
         }
 
-        private void InpValTwo_TextChanged(object sender, EventArgs e)
+        private void InpValTwoTextChanged(object sender, EventArgs e)
         {
             string input = InpValTwo.Text;
             if (input.Length == 0)
-                this.ValTwo = 0;
+            {
+                ValueTwo = 0;
+            }
+
             else
-                this.ValTwo = Convert.ToDouble(input);
+            {
+                ValueTwo = Convert.ToDouble(input);
+            }
+                
         }
 
-        private void Output_TextChanged(object sender, EventArgs e)
+        public void ParseInput(string argument)
         {
-            //Output.Text=
+         
         }
 
-        private void ButtMltp_Click(object sender, EventArgs e)
+        private void OutputTextChanged(object sender, EventArgs e)
         {
-            this.Result = this.ValOne * this.ValTwo;
-            Output.Text = this.Result.ToString();
-            this.Reset();
-
+            
         }
 
-        private void ButtDiv_Click(object sender, EventArgs e)
+        private void ButtMltpClick(object sender, EventArgs e)
         {
-            this.Result = this.ValOne  / this.ValTwo;
-            Output.Text = this.Result.ToString();
-            this.Reset();
-
-        }
-
-        private void ButtAdd_Click(object sender, EventArgs e)
-        {
-            this.Result = this.ValOne + this.ValTwo;
-            Output.Text = this.Result.ToString();
-            this.Reset();
+            Result = ValueOne * ValueTwo;
+            Output.Text = Result.ToString();
+            Reset();
 
         }
 
-        private void ButtSubr_Click(object sender, EventArgs e)
+        private void ButtDivClick(object sender, EventArgs e)
         {
-            this.Result = this.ValOne - this.ValTwo;
-            Output.Text = this.Result.ToString();
-            this.Reset();
+            if (ValueTwo == 0)
+            {
+                MessageBox.Show("Division by zero", "Error");
+                return;
+            }
+                
+            Result = ValueOne  / ValueTwo;
+            Output.Text = Result.ToString();
+            Reset();
+
+        }
+
+        private void ButtAddClick(object sender, EventArgs e)
+        {
+            Result = ValueOne + ValueTwo;
+            Output.Text =Result.ToString();
+            Reset();
+
+        }
+
+        private void ButtSubrClick(object sender, EventArgs e)
+        {
+           Result =ValueOne - ValueTwo;
+            Output.Text = Result.ToString();
+            Reset();
         }
 
         public void Reset()
@@ -87,6 +109,7 @@ namespace calc
             InpValTwo.Text = "";
         }
 
-       
+        
+
     }
 }
