@@ -44,17 +44,20 @@ namespace calc
             this.AdditionButton = new System.Windows.Forms.Button();
             this.SubstractionButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ModuleButton = new System.Windows.Forms.Button();
+            this.CosButton = new System.Windows.Forms.Button();
+            this.SinButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // InputLable
             // 
             this.InputLable.AutoSize = true;
-            this.InputLable.Font = new System.Drawing.Font("AR JULIAN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InputLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InputLable.ForeColor = System.Drawing.Color.SteelBlue;
             this.InputLable.Location = new System.Drawing.Point(155, 6);
             this.InputLable.Name = "InputLable";
-            this.InputLable.Size = new System.Drawing.Size(52, 19);
+            this.InputLable.Size = new System.Drawing.Size(51, 20);
             this.InputLable.TabIndex = 0;
             this.InputLable.Text = "Input";
             // 
@@ -64,7 +67,8 @@ namespace calc
             this.ValueOneInput.Name = "ValueOneInput";
             this.ValueOneInput.Size = new System.Drawing.Size(147, 20);
             this.ValueOneInput.TabIndex = 1;
-            this.ValueOneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueInputKeyPress);
+            this.ValueOneInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ValueOneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueOneInputKeyPress);
             // 
             // ValueTwoInput
             // 
@@ -72,24 +76,28 @@ namespace calc
             this.ValueTwoInput.Name = "ValueTwoInput";
             this.ValueTwoInput.Size = new System.Drawing.Size(147, 20);
             this.ValueTwoInput.TabIndex = 2;
+            this.ValueTwoInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ValueTwoInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueTwoInputKeyPress);
             // 
             // OutputLabel
             // 
             this.OutputLabel.AutoSize = true;
-            this.OutputLabel.Font = new System.Drawing.Font("AR JULIAN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.OutputLabel.Location = new System.Drawing.Point(12, 199);
+            this.OutputLabel.Location = new System.Drawing.Point(12, 232);
             this.OutputLabel.Name = "OutputLabel";
-            this.OutputLabel.Size = new System.Drawing.Size(72, 19);
+            this.OutputLabel.Size = new System.Drawing.Size(69, 20);
             this.OutputLabel.TabIndex = 3;
             this.OutputLabel.Text = "Output:";
             // 
             // OutputField
             // 
-            this.OutputField.Location = new System.Drawing.Point(86, 198);
+            this.OutputField.Location = new System.Drawing.Point(86, 229);
             this.OutputField.Name = "OutputField";
+            this.OutputField.ReadOnly = true;
             this.OutputField.Size = new System.Drawing.Size(186, 20);
             this.OutputField.TabIndex = 4;
+            this.OutputField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // MultiplyButton
             // 
@@ -149,11 +157,50 @@ namespace calc
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // ModuleButton
+            // 
+            this.ModuleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ModuleButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.ModuleButton.Location = new System.Drawing.Point(12, 166);
+            this.ModuleButton.Name = "ModuleButton";
+            this.ModuleButton.Size = new System.Drawing.Size(48, 40);
+            this.ModuleButton.TabIndex = 10;
+            this.ModuleButton.Text = "abs";
+            this.ModuleButton.UseVisualStyleBackColor = true;
+            this.ModuleButton.Click += new System.EventHandler(this.CalculateSingleArgument);
+            // 
+            // CosButton
+            // 
+            this.CosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CosButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.CosButton.Location = new System.Drawing.Point(67, 166);
+            this.CosButton.Name = "CosButton";
+            this.CosButton.Size = new System.Drawing.Size(51, 40);
+            this.CosButton.TabIndex = 11;
+            this.CosButton.Text = "cos";
+            this.CosButton.UseVisualStyleBackColor = true;
+            this.CosButton.Click += new System.EventHandler(this.CalculateSingleArgument);
+            // 
+            // SinButton
+            // 
+            this.SinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SinButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.SinButton.Location = new System.Drawing.Point(125, 166);
+            this.SinButton.Name = "SinButton";
+            this.SinButton.Size = new System.Drawing.Size(51, 40);
+            this.SinButton.TabIndex = 12;
+            this.SinButton.Text = "sin";
+            this.SinButton.UseVisualStyleBackColor = true;
+            this.SinButton.Click += new System.EventHandler(this.CalculateSingleArgument);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.SinButton);
+            this.Controls.Add(this.CosButton);
+            this.Controls.Add(this.ModuleButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SubstractionButton);
             this.Controls.Add(this.AdditionButton);
@@ -186,6 +233,9 @@ namespace calc
         private Button AdditionButton;
         private Button SubstractionButton;
         private PictureBox pictureBox1;
+        private Button ModuleButton;
+        private Button CosButton;
+        private Button SinButton;
     }
 }
 
