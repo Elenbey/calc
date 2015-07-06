@@ -109,7 +109,7 @@ namespace calc
             this.MultiplyButton.TabIndex = 5;
             this.MultiplyButton.Text = "*";
             this.MultiplyButton.UseVisualStyleBackColor = true;
-            this.MultiplyButton.Click += new System.EventHandler(this.Calculate);
+            this.MultiplyButton.Click += new System.EventHandler(this.CalculateTwoArguments);
             // 
             // DivisionButton
             // 
@@ -121,7 +121,7 @@ namespace calc
             this.DivisionButton.TabIndex = 6;
             this.DivisionButton.Text = "/";
             this.DivisionButton.UseVisualStyleBackColor = true;
-            this.DivisionButton.Click += new System.EventHandler(this.Calculate);
+            this.DivisionButton.Click += new System.EventHandler(this.CalculateTwoArguments);
             // 
             // AdditionButton
             // 
@@ -133,7 +133,7 @@ namespace calc
             this.AdditionButton.TabIndex = 7;
             this.AdditionButton.Text = "+";
             this.AdditionButton.UseVisualStyleBackColor = true;
-            this.AdditionButton.Click += new System.EventHandler(this.Calculate);
+            this.AdditionButton.Click += new System.EventHandler(this.CalculateTwoArguments);
             // 
             // SubstractionButton
             // 
@@ -145,7 +145,7 @@ namespace calc
             this.SubstractionButton.TabIndex = 8;
             this.SubstractionButton.Text = "-";
             this.SubstractionButton.UseVisualStyleBackColor = true;
-            this.SubstractionButton.Click += new System.EventHandler(this.Calculate);
+            this.SubstractionButton.Click += new System.EventHandler(this.CalculateTwoArguments);
             // 
             // pictureBox1
             // 
