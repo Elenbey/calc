@@ -140,7 +140,7 @@ namespace calc
             this.SubstractionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubstractionButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.SubstractionButton.Location = new System.Drawing.Point(67, 120);
-            this.SubstractionButton.Name = "SubstractionButton";
+            this.SubstractionButton.Name = "SubtractionButton";
             this.SubstractionButton.Size = new System.Drawing.Size(51, 40);
             this.SubstractionButton.TabIndex = 8;
             this.SubstractionButton.Text = "-";

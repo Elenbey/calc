@@ -2,6 +2,8 @@
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using calc.Factories;
+using calc.SingleArgumentCalcs;
+using calc.TwoArgumentsCalculator;
 
 namespace calc
 {
@@ -16,12 +18,12 @@ namespace calc
         {
             string senderName = ((Button) sender).Name;
             string operationName = senderName.Replace("Button", "");
-            double calculateResult;
 
             double firstValue = Convert.ToDouble(ValueOneInput.Text);
             double secondValue = Convert.ToDouble(ValueTwoInput.Text);
 
-            calculateResult = TwoArgumentsFactory.CreateCalculator(operationName).Calculate(firstValue,secondValue);
+            ITwoArgumentsCalculator Calculator = TwoArgumentsFactory.CreateCalculator(operationName);
+            var calculateResult = Calculator.Calculate(firstValue,secondValue);
 
 
             OutputField.Text = calculateResult.ToString();
@@ -37,11 +39,10 @@ namespace calc
             string senderName = ((Button)sender).Name;
             string operationName = senderName.Replace("Button", "");
 
-            double calculateResult;
-
             double inputValue = Convert.ToDouble(ValueOneInput.Text);
 
-            calculateResult = SingleArgumentFactory.CreateCalculator(operationName).Calculate(inputValue);
+            ISingleArgumentCalculator Calculator = SingleArgumentFactory.CreateCalculator(operationName);
+            var calculateResult = Calculator.Calculate(inputValue);
 
             OutputField.Text = calculateResult.ToString();
         }
