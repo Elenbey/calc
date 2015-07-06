@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.InputLable = new System.Windows.Forms.Label();
-            this.InpValOne = new System.Windows.Forms.TextBox();
-            this.InpValTwo = new System.Windows.Forms.TextBox();
+            this.ValueOneInput = new System.Windows.Forms.TextBox();
+            this.ValueTwoInput = new System.Windows.Forms.TextBox();
             this.OutputLabel = new System.Windows.Forms.Label();
-            this.Output = new System.Windows.Forms.TextBox();
-            this.ButtMltp = new System.Windows.Forms.Button();
-            this.ButtDiv = new System.Windows.Forms.Button();
-            this.ButtAdd = new System.Windows.Forms.Button();
-            this.ButtSubr = new System.Windows.Forms.Button();
+            this.OutputField = new System.Windows.Forms.TextBox();
+            this.MultiplyButton = new System.Windows.Forms.Button();
+            this.DivisionButton = new System.Windows.Forms.Button();
+            this.AdditionButton = new System.Windows.Forms.Button();
+            this.SubstractionButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+
+
             // 
             // InputLable
             // 
@@ -51,21 +53,21 @@
             this.InputLable.Text = "Input";
             this.InputLable.Click += new System.EventHandler(this.InputLableClick);
             // 
-            // InpValOne
+            // InputValueOne
             // 
-            this.InpValOne.Location = new System.Drawing.Point(12, 28);
-            this.InpValOne.Name = "InpValOne";
-            this.InpValOne.Size = new System.Drawing.Size(104, 20);
-            this.InpValOne.TabIndex = 1;
-            this.InpValOne.TextChanged += new System.EventHandler(this.InpValOneTextChanged);
+            this.ValueOneInput.Location = new System.Drawing.Point(12, 28);
+            this.ValueOneInput.Name = "InputValueOne";
+            this.ValueOneInput.Size = new System.Drawing.Size(104, 20);
+            this.ValueOneInput.TabIndex = 1;
+            this.ValueOneInput.TextChanged += new System.EventHandler(this.ValueOneInputTextChanged);
             // 
             // InpValTwo
             // 
-            this.InpValTwo.Location = new System.Drawing.Point(149, 28);
-            this.InpValTwo.Name = "InpValTwo";
-            this.InpValTwo.Size = new System.Drawing.Size(100, 20);
-            this.InpValTwo.TabIndex = 2;
-            this.InpValTwo.TextChanged += new System.EventHandler(this.InpValTwoTextChanged);
+            this.ValueTwoInput.Location = new System.Drawing.Point(149, 28);
+            this.ValueTwoInput.Name = "InpValTwo";
+            this.ValueTwoInput.Size = new System.Drawing.Size(100, 20);
+            this.ValueTwoInput.TabIndex = 2;
+            this.ValueTwoInput.TextChanged += new System.EventHandler(this.ValueTwoInputTextChanged);
             // 
             // OutputLabel
             // 
@@ -80,69 +82,69 @@
             // 
             // Output
             // 
-            this.Output.Location = new System.Drawing.Point(12, 102);
-            this.Output.Name = "Output";
-            this.Output.Size = new System.Drawing.Size(237, 20);
-            this.Output.TabIndex = 4;
-            this.Output.TextChanged += new System.EventHandler(this.OutputTextChanged);
+            this.OutputField.Location = new System.Drawing.Point(12, 102);
+            this.OutputField.Name = "Output";
+            this.OutputField.Size = new System.Drawing.Size(237, 20);
+            this.OutputField.TabIndex = 4;
+            this.OutputField.TextChanged += new System.EventHandler(this.OutputFieldTextChanged);
             // 
             // ButtMltp
             // 
-            this.ButtMltp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtMltp.Location = new System.Drawing.Point(12, 140);
-            this.ButtMltp.Name = "ButtMltp";
-            this.ButtMltp.Size = new System.Drawing.Size(32, 28);
-            this.ButtMltp.TabIndex = 5;
-            this.ButtMltp.Text = "*";
-            this.ButtMltp.UseVisualStyleBackColor = true;
-            this.ButtMltp.Click += new System.EventHandler(this.ButtMltpClick);
+            this.MultiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MultiplyButton.Location = new System.Drawing.Point(12, 140);
+            this.MultiplyButton.Name = "MultiplyButton";
+            this.MultiplyButton.Size = new System.Drawing.Size(32, 28);
+            this.MultiplyButton.TabIndex = 5;
+            this.MultiplyButton.Text = "*";
+            this.MultiplyButton.UseVisualStyleBackColor = true;
+            this.MultiplyButton.Click += new System.EventHandler(this.MultiplyButtonClick);
             // 
             // ButtDiv
             // 
-            this.ButtDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtDiv.Location = new System.Drawing.Point(72, 140);
-            this.ButtDiv.Name = "ButtDiv";
-            this.ButtDiv.Size = new System.Drawing.Size(29, 28);
-            this.ButtDiv.TabIndex = 6;
-            this.ButtDiv.Text = "/";
-            this.ButtDiv.UseVisualStyleBackColor = true;
-            this.ButtDiv.Click += new System.EventHandler(this.ButtDivClick);
+            this.DivisionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DivisionButton.Location = new System.Drawing.Point(72, 140);
+            this.DivisionButton.Name = "DivisionButton";
+            this.DivisionButton.Size = new System.Drawing.Size(29, 28);
+            this.DivisionButton.TabIndex = 6;
+            this.DivisionButton.Text = "/";
+            this.DivisionButton.UseVisualStyleBackColor = true;
+            this.DivisionButton.Click += new System.EventHandler(this.DivisionButtonClick);
             // 
             // ButtAdd
             // 
-            this.ButtAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtAdd.Location = new System.Drawing.Point(137, 140);
-            this.ButtAdd.Name = "ButtAdd";
-            this.ButtAdd.Size = new System.Drawing.Size(29, 28);
-            this.ButtAdd.TabIndex = 7;
-            this.ButtAdd.Text = "+";
-            this.ButtAdd.UseVisualStyleBackColor = true;
-            this.ButtAdd.Click += new System.EventHandler(this.ButtAddClick);
+            this.AdditionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionButton.Location = new System.Drawing.Point(137, 140);
+            this.AdditionButton.Name = "AdditionButton";
+            this.AdditionButton.Size = new System.Drawing.Size(29, 28);
+            this.AdditionButton.TabIndex = 7;
+            this.AdditionButton.Text = "+";
+            this.AdditionButton.UseVisualStyleBackColor = true;
+            this.AdditionButton.Click += new System.EventHandler(this.AdditionButtonClick);
             // 
             // ButtSubr
             // 
-            this.ButtSubr.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ButtSubr.Location = new System.Drawing.Point(208, 140);
-            this.ButtSubr.Name = "ButtSubr";
-            this.ButtSubr.Size = new System.Drawing.Size(25, 28);
-            this.ButtSubr.TabIndex = 8;
-            this.ButtSubr.Text = "-";
-            this.ButtSubr.UseVisualStyleBackColor = true;
-            this.ButtSubr.Click += new System.EventHandler(this.ButtSubrClick);
+            this.SubstractionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubstractionButton.Location = new System.Drawing.Point(208, 140);
+            this.SubstractionButton.Name = "SubstractionButton";
+            this.SubstractionButton.Size = new System.Drawing.Size(25, 28);
+            this.SubstractionButton.TabIndex = 8;
+            this.SubstractionButton.Text = "-";
+            this.SubstractionButton.UseVisualStyleBackColor = true;
+            this.SubstractionButton.Click += new System.EventHandler(this.SubstractionButtonClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.ButtSubr);
-            this.Controls.Add(this.ButtAdd);
-            this.Controls.Add(this.ButtDiv);
-            this.Controls.Add(this.ButtMltp);
-            this.Controls.Add(this.Output);
+            this.Controls.Add(this.SubstractionButton);
+            this.Controls.Add(this.AdditionButton);
+            this.Controls.Add(this.DivisionButton);
+            this.Controls.Add(this.MultiplyButton);
+            this.Controls.Add(this.OutputField);
             this.Controls.Add(this.OutputLabel);
-            this.Controls.Add(this.InpValTwo);
-            this.Controls.Add(this.InpValOne);
+            this.Controls.Add(this.ValueTwoInput);
+            this.Controls.Add(this.ValueOneInput);
             this.Controls.Add(this.InputLable);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -155,14 +157,14 @@
         #endregion
 
         private System.Windows.Forms.Label InputLable;
-        private System.Windows.Forms.TextBox InpValOne;
-        private System.Windows.Forms.TextBox InpValTwo;
+        private System.Windows.Forms.TextBox ValueOneInput;
+        private System.Windows.Forms.TextBox ValueTwoInput;
         private System.Windows.Forms.Label OutputLabel;
-        private System.Windows.Forms.TextBox Output;
-        private System.Windows.Forms.Button ButtMltp;
-        private System.Windows.Forms.Button ButtDiv;
-        private System.Windows.Forms.Button ButtAdd;
-        private System.Windows.Forms.Button ButtSubr;
+        private System.Windows.Forms.TextBox OutputField;
+        private System.Windows.Forms.Button MultiplyButton;
+        private System.Windows.Forms.Button DivisionButton;
+        private System.Windows.Forms.Button AdditionButton;
+        private System.Windows.Forms.Button SubstractionButton;
     }
 }
 

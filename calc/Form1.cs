@@ -27,9 +27,9 @@ namespace calc
 
         }
 
-        private void InpValOneTextChanged(object sender, EventArgs e)
+        private void ValueOneInputTextChanged(object sender, EventArgs e)
         {
-            string input = InpValOne.Text;
+            string input = ValueOneInput.Text;
             if (input.Length == 0)
             {
                 ValueOne = 0;
@@ -41,9 +41,9 @@ namespace calc
             
         }
 
-        private void InpValTwoTextChanged(object sender, EventArgs e)
+        private void ValueTwoInputTextChanged(object sender, EventArgs e)
         {
-            string input = InpValTwo.Text;
+            string input = ValueTwoInput.Text;
             if (input.Length == 0)
             {
                 ValueTwo = 0;
@@ -61,20 +61,20 @@ namespace calc
          
         }
 
-        private void OutputTextChanged(object sender, EventArgs e)
+        private void OutputFieldTextChanged(object sender, EventArgs e)
         {
             
         }
 
-        private void ButtMltpClick(object sender, EventArgs e)
+        private void MultiplyButtonClick(object sender, EventArgs e)
         {
             Result = ValueOne * ValueTwo;
-            Output.Text = Result.ToString();
+            OutputField.Text = Result.ToString();
             Reset();
 
         }
 
-        private void ButtDivClick(object sender, EventArgs e)
+        private void DivisionButtonClick(object sender, EventArgs e)
         {
             if (ValueTwo == 0)
             {
@@ -83,31 +83,32 @@ namespace calc
             }
                 
             Result = ValueOne  / ValueTwo;
-            Output.Text = Result.ToString();
+            OutputField.Text = Result.ToString();
             Reset();
 
         }
 
-        private void ButtAddClick(object sender, EventArgs e)
+        private void AdditionButtonClick(object sender, EventArgs e)
         {
             Result = ValueOne + ValueTwo;
-            Output.Text =Result.ToString();
+            OutputField.Text = Result.ToString();
             Reset();
 
         }
 
-        private void ButtSubrClick(object sender, EventArgs e)
+        private void SubstractionButtonClick(object sender, EventArgs e)
         {
            Result =ValueOne - ValueTwo;
-            Output.Text = Result.ToString();
+           OutputField.Text = Result.ToString();
             Reset();
         }
 
         public void Reset()
         {
-            InpValOne.Text = "";
-            InpValTwo.Text = "";
+            ValueOneInput.Text = "";
+            ValueTwoInput.Text = "";
         }
+
 
         
 
