@@ -11,29 +11,29 @@ namespace calc
             string senderName = ((Button) sender).Name;
             double calculateResult = 0;
 
-            double FirstValue = Convert.ToDouble(ValueOneInput.Text);
-            double SecondValue = Convert.ToDouble(ValueTwoInput.Text);
+            double firstValue = Convert.ToDouble(ValueOneInput.Text);
+            double secondValue = Convert.ToDouble(ValueTwoInput.Text);
 
             switch (senderName)
             {
                 case "MultiplyButton":
-                    calculateResult = FirstValue * SecondValue;
+                    calculateResult = firstValue * secondValue;
                     break;
                 case "DivisionButton":
-                    if (SecondValue == 0)
+                    if (secondValue == 0)
                     {
                         throw new Exception("Division by zero");
                     }
 
-                    calculateResult = FirstValue / SecondValue;
+                    calculateResult = firstValue / secondValue;
                     break;
 
                 case "AdditionButton":
-                    calculateResult = FirstValue + SecondValue;
+                    calculateResult = firstValue + secondValue;
                     break;
 
                 case "SubstractionButton":
-                    calculateResult = FirstValue - SecondValue;
+                    calculateResult = firstValue - secondValue;
                     break;
 
                 default:
@@ -47,6 +47,17 @@ namespace calc
         public MainForm()
         {
             InitializeComponent();
+            ValueOneInput.KeyPress += new KeyPressEventHandler(ValueInputKeyPress);
+            ValueTwoInput.KeyPress += new KeyPressEventHandler(ValueInputKeyPress);
+        }
+
+        private void ValueInputKeyPress(object sender, KeyPressEventArgs e)
+        {
+            char introductionSymbols = e.KeyChar;
+            if (!Char.IsDigit(introductionSymbols) && introductionSymbols!=8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

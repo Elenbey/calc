@@ -33,109 +33,128 @@ namespace calc
         /// </summary>
         private void InitializeComponent()
         {
-            this.InputLable = new Label();
-            this.ValueOneInput = new TextBox();
-            this.ValueTwoInput = new TextBox();
-            this.OutputLabel = new Label();
-            this.OutputField = new TextBox();
-            this.MultiplyButton = new Button();
-            this.DivisionButton = new Button();
-            this.AdditionButton = new Button();
-            this.SubstractionButton = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.InputLable = new System.Windows.Forms.Label();
+            this.ValueOneInput = new System.Windows.Forms.TextBox();
+            this.ValueTwoInput = new System.Windows.Forms.TextBox();
+            this.OutputLabel = new System.Windows.Forms.Label();
+            this.OutputField = new System.Windows.Forms.TextBox();
+            this.MultiplyButton = new System.Windows.Forms.Button();
+            this.DivisionButton = new System.Windows.Forms.Button();
+            this.AdditionButton = new System.Windows.Forms.Button();
+            this.SubstractionButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // InputLable
             // 
             this.InputLable.AutoSize = true;
-            this.InputLable.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
-            this.InputLable.ForeColor = Color.DarkCyan;
-            this.InputLable.Location = new Point(12, 9);
+            this.InputLable.Font = new System.Drawing.Font("AR JULIAN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InputLable.ForeColor = System.Drawing.Color.SteelBlue;
+            this.InputLable.Location = new System.Drawing.Point(155, 6);
             this.InputLable.Name = "InputLable";
-            this.InputLable.Size = new Size(41, 16);
+            this.InputLable.Size = new System.Drawing.Size(52, 19);
             this.InputLable.TabIndex = 0;
             this.InputLable.Text = "Input";
             // 
             // ValueOneInput
             // 
-            this.ValueOneInput.Location = new Point(12, 28);
+            this.ValueOneInput.Location = new System.Drawing.Point(125, 28);
             this.ValueOneInput.Name = "ValueOneInput";
-            this.ValueOneInput.Size = new Size(104, 20);
+            this.ValueOneInput.Size = new System.Drawing.Size(147, 20);
             this.ValueOneInput.TabIndex = 1;
+            this.ValueOneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueInputKeyPress);
             // 
             // ValueTwoInput
             // 
-            this.ValueTwoInput.Location = new Point(149, 28);
+            this.ValueTwoInput.Location = new System.Drawing.Point(125, 70);
             this.ValueTwoInput.Name = "ValueTwoInput";
-            this.ValueTwoInput.Size = new Size(100, 20);
+            this.ValueTwoInput.Size = new System.Drawing.Size(147, 20);
             this.ValueTwoInput.TabIndex = 2;
             // 
             // OutputLabel
             // 
             this.OutputLabel.AutoSize = true;
-            this.OutputLabel.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
-            this.OutputLabel.ForeColor = Color.DarkCyan;
-            this.OutputLabel.Location = new Point(13, 68);
+            this.OutputLabel.Font = new System.Drawing.Font("AR JULIAN", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OutputLabel.ForeColor = System.Drawing.Color.SteelBlue;
+            this.OutputLabel.Location = new System.Drawing.Point(12, 199);
             this.OutputLabel.Name = "OutputLabel";
-            this.OutputLabel.Size = new Size(52, 16);
+            this.OutputLabel.Size = new System.Drawing.Size(72, 19);
             this.OutputLabel.TabIndex = 3;
-            this.OutputLabel.Text = "Output";
+            this.OutputLabel.Text = "Output:";
             // 
             // OutputField
             // 
-            this.OutputField.Location = new Point(12, 102);
+            this.OutputField.Location = new System.Drawing.Point(86, 198);
             this.OutputField.Name = "OutputField";
-            this.OutputField.Size = new Size(237, 20);
+            this.OutputField.Size = new System.Drawing.Size(186, 20);
             this.OutputField.TabIndex = 4;
             // 
             // MultiplyButton
             // 
-            this.MultiplyButton.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
-            this.MultiplyButton.Location = new Point(12, 140);
+            this.MultiplyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MultiplyButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.MultiplyButton.Location = new System.Drawing.Point(182, 120);
             this.MultiplyButton.Name = "MultiplyButton";
-            this.MultiplyButton.Size = new Size(32, 28);
+            this.MultiplyButton.Size = new System.Drawing.Size(52, 40);
             this.MultiplyButton.TabIndex = 5;
             this.MultiplyButton.Text = "*";
             this.MultiplyButton.UseVisualStyleBackColor = true;
-            this.MultiplyButton.Click += new EventHandler(this.Calculate);
+            this.MultiplyButton.Click += new System.EventHandler(this.Calculate);
             // 
             // DivisionButton
             // 
-            this.DivisionButton.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
-            this.DivisionButton.Location = new Point(72, 140);
+            this.DivisionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DivisionButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.DivisionButton.Location = new System.Drawing.Point(125, 120);
             this.DivisionButton.Name = "DivisionButton";
-            this.DivisionButton.Size = new Size(29, 28);
+            this.DivisionButton.Size = new System.Drawing.Size(51, 40);
             this.DivisionButton.TabIndex = 6;
             this.DivisionButton.Text = "/";
             this.DivisionButton.UseVisualStyleBackColor = true;
-            this.DivisionButton.Click += new EventHandler(this.Calculate);
+            this.DivisionButton.Click += new System.EventHandler(this.Calculate);
             // 
             // AdditionButton
             // 
-            this.AdditionButton.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
-            this.AdditionButton.Location = new Point(137, 140);
+            this.AdditionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.AdditionButton.Location = new System.Drawing.Point(12, 120);
             this.AdditionButton.Name = "AdditionButton";
-            this.AdditionButton.Size = new Size(29, 28);
+            this.AdditionButton.Size = new System.Drawing.Size(48, 40);
             this.AdditionButton.TabIndex = 7;
             this.AdditionButton.Text = "+";
             this.AdditionButton.UseVisualStyleBackColor = true;
-            this.AdditionButton.Click += new EventHandler(this.Calculate);
+            this.AdditionButton.Click += new System.EventHandler(this.Calculate);
             // 
             // SubstractionButton
             // 
-            this.SubstractionButton.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
-            this.SubstractionButton.Location = new Point(208, 140);
+            this.SubstractionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubstractionButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.SubstractionButton.Location = new System.Drawing.Point(67, 120);
             this.SubstractionButton.Name = "SubstractionButton";
-            this.SubstractionButton.Size = new Size(25, 28);
+            this.SubstractionButton.Size = new System.Drawing.Size(51, 40);
             this.SubstractionButton.TabIndex = 8;
             this.SubstractionButton.Text = "-";
             this.SubstractionButton.UseVisualStyleBackColor = true;
-            this.SubstractionButton.Click += new EventHandler(this.Calculate);
+            this.SubstractionButton.Click += new System.EventHandler(this.Calculate);
             // 
-            // Form1
+            // pictureBox1
             // 
-            this.AutoScaleDimensions = new SizeF(6F, 13F);
-            this.AutoScaleMode = AutoScaleMode.Font;
-            this.ClientSize = new Size(284, 261);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-23, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(142, 98);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SubstractionButton);
             this.Controls.Add(this.AdditionButton);
             this.Controls.Add(this.DivisionButton);
@@ -145,9 +164,11 @@ namespace calc
             this.Controls.Add(this.ValueTwoInput);
             this.Controls.Add(this.ValueOneInput);
             this.Controls.Add(this.InputLable);
+            this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Name = "MainForm";
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Calculator";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +185,7 @@ namespace calc
         private Button DivisionButton;
         private Button AdditionButton;
         private Button SubstractionButton;
+        private PictureBox pictureBox1;
     }
 }
 
