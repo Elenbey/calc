@@ -17,6 +17,19 @@ namespace calc.Factories
 
                 case "Sin":
                     return new SinCalculator();
+
+                case "Sqrt":
+                    return new SqrtCalculator();
+
+                case "Tan":
+                    return new TanCalculator();
+
+                case "Log":
+                    return new LogCalculator();
+
+                case "Sinh":
+                    return new SinhCalculator();
+
                 default:
                     throw new Exception("Unknown calculator");
             }

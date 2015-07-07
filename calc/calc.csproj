@@ -56,12 +56,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleArgumentCalculator\CosCalculator.cs" />
     <Compile Include="SingleArgumentCalculator\ISingleArgumentCalculator.cs" />
+    <Compile Include="SingleArgumentCalculator\LogCalculator.cs" />
     <Compile Include="SingleArgumentCalculator\ModuleCalculator.cs" />
     <Compile Include="SingleArgumentCalculator\SinCalculator.cs" />
+    <Compile Include="SingleArgumentCalculator\SinhCalculator.cs" />
+    <Compile Include="SingleArgumentCalculator\SqrtCalculator.cs" />
+    <Compile Include="SingleArgumentCalculator\TanCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\AdditionCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\DivisionCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\ITwoArgumentsCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\MultiplyCalculator.cs" />
+    <Compile Include="TwoArgumentsCalculator\PowerCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\SubtractionCalculator.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -21,6 +21,8 @@ namespace calc.Factories
                 case "Subtraction":
                     return new SubtractionCalculator();
 
+                case "Power":
+                    return new PowerCalculator();
                 default:
                     throw new Exception("Unknown calculator");
             }
