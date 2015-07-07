@@ -1,12 +1,25 @@
 ﻿using System;
+using calc.SingleArgumentCalcs;
+using NUnit.Framework;
 
-namespace calc.SingleArgumentCalcs
+namespace calc.Tests.SingleArgumentCalcs
 {
-    public class SinCalculator : ISingleArgumentCalculator
+    [TestFixture]
+    public class SinCalculatorTest
     {
-        public double Calculate(double argument)
+        [TestCase(0, 0, 1.0)]
+        [TestCase(0.1, 0.099, 0.001)]
+        [TestCase(0.5, 0.479, 0.001)]
+        [TestCase(1, 0.841, 0.001)]
+        [TestCase(-0.1, -0.099, 0.001)]
+        [TestCase(-0.5, -0.479, 0.001)]
+        public void CalculateTest(double argument, double result, double accuracy)
         {
-            return Math.Sin(argument);
+            var calculator = new SinCalculator();
+            var testResult = calculator.Calculate(argument);
+
+            Assert.AreEqual(testResult, result, accuracy);
+
         }
     }
 }

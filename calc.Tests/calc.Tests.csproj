@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleArgumentCalculator\CosCalculatorTest.cs" />
-    <Compile Include="SingleArgumentCalculator\ISingleArgumentCalculatorTest.cs" />
     <Compile Include="SingleArgumentCalculator\LogCalculatorTest.cs" />
     <Compile Include="SingleArgumentCalculator\ModuleCalculatorTest.cs" />
     <Compile Include="SingleArgumentCalculator\SinCalculatorTest.cs" />

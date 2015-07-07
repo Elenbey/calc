@@ -1,12 +1,38 @@
 ﻿using System;
+using calc.SingleArgumentCalcs;
+using NUnit.Framework;
 
-namespace calc.SingleArgumentCalcs
+namespace calc.Tests.SingleArgumentCalcs
 {
-    public class LogCalculator : ISingleArgumentCalculator
+    [TestFixture]
+    public class LogCalculatorTest
     {
-        public double Calculate(double argument)
+        [TestCase(1, 0, 1.0)]
+        [TestCase(0.1, -1, 1.0)]
+        [TestCase(0.4, -0.397, 0.001)]
+        [TestCase(0.5, -0.301, 0.001)]
+        [TestCase(5, 0.698, 0.001)]
+        [TestCase(25, 1.397, 0.001)]
+       
+
+        public void CalculateTest(double argument, double result, double accuracy)
         {
-            return Math.Log(argument);
+            var calculator = new LogCalculator();
+            var testResult = calculator.Calculate(argument);
+
+            Assert.AreEqual(testResult, result, accuracy);
+
         }
+
+      
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void LogNegativeTest()
+        {
+            var calculator = new LogCalculator();
+            var testResult = calculator.Calculate(-0.1);
+        }
+
     }
+    
 }

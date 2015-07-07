@@ -11,6 +11,9 @@ namespace calc.Tests.SingleArgumentCalcs
         [TestCase(0.1, 0.995,0.001)]
         [TestCase(0.5, 0.877,0.001)]
         [TestCase(1, 0.540,0.001)]
+        [TestCase(-0.1, 0.995, 0.001)]
+        [TestCase(-0.5, 0.877, 0.001)]
+
         public void CalculateTest(double argument, double result,double accuracy)
         {
             var calculator = new CosCalculator();

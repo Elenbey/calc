@@ -6,7 +6,11 @@ namespace calc.SingleArgumentCalcs
     {
         public double Calculate(double argument)
         {
-            return Math.Log(argument);
+            if(argument == 0)
+                throw new Exception("LogNull");
+            if (argument < 0)
+                throw new Exception("LogNegative");
+            return Math.Log10(argument);
         }
     }
 }
