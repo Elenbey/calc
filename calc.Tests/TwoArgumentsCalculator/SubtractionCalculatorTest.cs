@@ -1,10 +1,21 @@
-﻿namespace calc.TwoArgumentsCalculator
+﻿using NUnit.Framework;
+
+namespace calc.TwoArgumentsCalculator
 {
-    public class SubtractionCalculator : ITwoArgumentsCalculator
+    [TestFixture]
+    public class SubtractionCalculatorTest
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        [TestCase(0, 0, 0)]
+        [TestCase(3, 4, -1)]
+        [TestCase(-7, -2, -5)]
+        [TestCase(0.5, 0.3, 0.2)]
+        public void CalculateTest(double valueOne, double valueTwo, double result)
         {
-            return firstArgument - secondArgument;
+            var calculator = new SubtractionCalculator();
+            var testResult = calculator.Calculate(valueOne, valueTwo);
+
+
+            Assert.AreEqual(testResult, result);
         }
     }
 }
