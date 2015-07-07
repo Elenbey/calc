@@ -7,13 +7,16 @@ namespace calc.Tests.SingleArgumentCalcs
     [TestFixture]
     public class CosCalculatorTest
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(0, 1,1.0)]
+        [TestCase(0.1, 0.995,0.001)]
+        [TestCase(0.5, 0.877,0.001)]
+        [TestCase(1, 0.540,0.001)]
+        public void CalculateTest(double argument, double result,double accuracy)
         {
             var calculator = new CosCalculator();
-            var testResult = calculator.Calculate(0);
-            var realResult = Math.Cos(0);
-            Assert.AreEqual(testResult, realResult);
+            var testResult = calculator.Calculate(argument);
+           
+            Assert.AreEqual(testResult, result, accuracy);
 
         }
     }

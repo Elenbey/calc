@@ -2,6 +2,7 @@
 
 namespace calc.SingleArgumentCalcs
 {
+    
     public class CosCalculator : ISingleArgumentCalculator
     {
         public double Calculate(double argument)

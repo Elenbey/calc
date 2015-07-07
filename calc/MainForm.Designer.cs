@@ -73,7 +73,6 @@ namespace calc
             this.ValueOneInput.Size = new System.Drawing.Size(189, 20);
             this.ValueOneInput.TabIndex = 1;
             this.ValueOneInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ValueOneInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueOneInputKeyPress);
             // 
             // ValueTwoInput
             // 
@@ -82,7 +81,6 @@ namespace calc
             this.ValueTwoInput.Size = new System.Drawing.Size(189, 20);
             this.ValueTwoInput.TabIndex = 2;
             this.ValueTwoInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ValueTwoInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValueTwoInputKeyPress);
             // 
             // OutputLabel
             // 

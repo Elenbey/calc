@@ -46,13 +46,12 @@ namespace calc
 
             OutputField.Text = calculateResult.ToString();
         }
-
         public MainForm()
         {
             InitializeComponent();
         }
 
-
+/*
 
         private void ValueOneInputKeyPress(object sender, KeyPressEventArgs e)
         {
@@ -74,7 +73,7 @@ namespace calc
             }
         }
 
- 
+ */
        
     }
 }
