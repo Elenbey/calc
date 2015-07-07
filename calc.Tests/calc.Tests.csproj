@@ -50,6 +50,11 @@
     <Compile Include="SingleArgumentCalculator\SinhCalculatorTest.cs" />
     <Compile Include="SingleArgumentCalculator\SqrtCalculatorTest.cs" />
     <Compile Include="SingleArgumentCalculator\TanCalculatorTest.cs" />
+    <Compile Include="TwoArgumentsCalculator\AdditionCalculatorTest.cs" />
+    <Compile Include="TwoArgumentsCalculator\DivisionCalculatorTest.cs" />
+    <Compile Include="TwoArgumentsCalculator\MultiplyCalculatorTest.cs" />
+    <Compile Include="TwoArgumentsCalculator\PowerCalculatorTest.cs" />
+    <Compile Include="TwoArgumentsCalculator\SubtractionCalculatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
