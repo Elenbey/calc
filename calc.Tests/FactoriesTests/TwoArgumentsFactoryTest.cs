@@ -1,31 +1,32 @@
 ﻿using System;
+using calc.SingleArgumentCalcs;
 using calc.TwoArgumentsCalculator;
+using NUnit.Framework;
 
 namespace calc.Factories
 {
-    public static class TwoArgumentsFactory
+    [TestFixture]
+    public class TwoArgumentsFactoryTest
     {
-        public static ITwoArgumentsCalculator CreateCalculator(string calculatorName)
+        [TestCase("Addition", typeof(AdditionCalculator))]
+        [TestCase("Division", typeof(DivisionCalculator))]
+        [TestCase("Multiply", typeof(MultiplyCalculator))]
+        [TestCase("Power", typeof(PowerCalculator))]
+        [TestCase("Subtraction", typeof(SubtractionCalculator))]
+       
+        public void CreateCalculatorTest(string calculatorName, Type expectedCalculator)
         {
-            switch (calculatorName)
-            {
-                case "Addition":
-                    return new AdditionCalculator();
+            var calculator = TwoArgumentsFactory.CreateCalculator(calculatorName);
 
-                case "Division":
-                    return new DivisionCalculator();
+            Assert.AreEqual(calculator.GetType(), expectedCalculator);
 
-                case "Multiply":
-                    return new MultiplyCalculator();
+        }
 
-                case "Subtraction":
-                    return new SubtractionCalculator();
-
-                case "Power":
-                    return new PowerCalculator();
-                default:
-                    throw new Exception("Unknown calculator");
-            }
+        [Test]
+        [ExpectedException(typeof(Exception))]
+        public void UnknownCalculatorTest()
+        {
+            var calculator = TwoArgumentsFactory.CreateCalculator("wrong name");
         }
     }
 }
