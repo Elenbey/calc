@@ -1,8 +1,9 @@
 ﻿using System;
-using calc.SingleArgumentCalcs;
+using calc.Factories;
+using calc.SingleArgumentCalculator;
 using NUnit.Framework;
 
-namespace calc.Factories
+namespace calc.Tests.FactoriesTests
 {
     [TestFixture]
     public  class SingleArgumentFactoryTest
@@ -14,7 +15,6 @@ namespace calc.Factories
         [TestCase("Tan", typeof(TanCalculator))]
         [TestCase("Log", typeof(LogCalculator))]
         [TestCase("Sinh", typeof(SinhCalculator))]
-
         public  void CreateCalculatorTest(string calculatorName, Type expectedCalculator)
         {
             var calculator = SingleArgumentFactory.CreateCalculator(calculatorName);
@@ -27,7 +27,7 @@ namespace calc.Factories
         [ExpectedException(typeof(Exception))]
         public void UnknownCalculatorTest()
         {
-            var calculator = SingleArgumentFactory.CreateCalculator("wrong name");
+            SingleArgumentFactory.CreateCalculator("wrong name");
         }
     }
 }

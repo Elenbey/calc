@@ -1,5 +1,5 @@
 ﻿using System;
-using calc.SingleArgumentCalcs;
+using calc.SingleArgumentCalculator;
 
 namespace calc.Factories
 {

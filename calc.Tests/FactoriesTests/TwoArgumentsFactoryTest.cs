@@ -1,9 +1,9 @@
 ﻿using System;
-using calc.SingleArgumentCalcs;
+using calc.Factories;
 using calc.TwoArgumentsCalculator;
 using NUnit.Framework;
 
-namespace calc.Factories
+namespace calc.Tests.FactoriesTests
 {
     [TestFixture]
     public class TwoArgumentsFactoryTest

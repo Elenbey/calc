@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using calc.Factories;
-using calc.SingleArgumentCalcs;
+using calc.SingleArgumentCalculator;
 using calc.TwoArgumentsCalculator;
 
 namespace calc

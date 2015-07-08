@@ -1,8 +1,8 @@
 ﻿using System;
-using calc.SingleArgumentCalcs;
+using calc.SingleArgumentCalculator;
 using NUnit.Framework;
 
-namespace calc.Tests.SingleArgumentCalcs
+namespace calc.Tests.SingleArgumentCalculatorTests
 {
     [TestFixture]
     public class LogCalculatorTest

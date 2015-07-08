@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Data;
 
-namespace calc.SingleArgumentCalcs
+namespace calc.SingleArgumentCalculator
 {
     public class SqrtCalculator : ISingleArgumentCalculator
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace calc.SingleArgumentCalcs
+namespace calc.SingleArgumentCalculator
 {
     
     public class CosCalculator : ISingleArgumentCalculator

@@ -1,4 +1,4 @@
-﻿namespace calc.SingleArgumentCalcs
+﻿namespace calc.SingleArgumentCalculator
 {
     public interface ISingleArgumentCalculator
     {

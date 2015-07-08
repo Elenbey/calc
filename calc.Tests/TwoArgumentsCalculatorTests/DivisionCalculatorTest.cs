@@ -1,7 +1,8 @@
 ﻿using System;
+using calc.TwoArgumentsCalculator;
 using NUnit.Framework;
 
-namespace calc.TwoArgumentsCalculator
+namespace calc.Tests.TwoArgumentsCalculatorTests
 {
     [TestFixture]
     public class DivisionCalculatorTest

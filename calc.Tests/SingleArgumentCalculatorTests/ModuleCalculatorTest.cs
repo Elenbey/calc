@@ -1,7 +1,7 @@
-﻿using System;
+﻿using calc.SingleArgumentCalculator;
 using NUnit.Framework;
 
-namespace calc.SingleArgumentCalcs
+namespace calc.Tests.SingleArgumentCalculatorTests
 {
     [TestFixture]
     public class ModuleCalculatorTest
