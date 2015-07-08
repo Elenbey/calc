@@ -1,12 +1,34 @@
 ﻿using System;
+using calc.SingleArgumentCalcs;
+using NUnit.Framework;
 
-namespace calc.SingleArgumentCalcs
+namespace calc.Tests.SingleArgumentCalcs
 {
-    public class TanCalculator : ISingleArgumentCalculator
+    [TestFixture]
+    public class TanCalculatorTest
     {
-        public double Calculate(double argument)
+        [TestCase(1, 1.557, 0.001)]
+        [TestCase(0.1, 0.100, 0.001)]
+        [TestCase(4,1.157, 0.001)]
+        [TestCase(0.5, 0.546, 0.001)]
+        [TestCase(0, 0, 1.0)]
+        [TestCase(-0.1, -0.100, 0.001)]
+        [TestCase(-4, -1.157, 0.001)]
+        
+
+
+        public void CalculateTest(double argument, double result, double accuracy)
         {
-            return Math.Tan(argument);
+            var calculator = new TanCalculator();
+            var testResult = calculator.Calculate(argument);
+
+            Assert.AreEqual(testResult, result, accuracy);
+
         }
+
+
+       
+
     }
+
 }
