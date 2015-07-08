@@ -2,7 +2,9 @@
 using System.Linq.Expressions;
 using System.Windows.Forms;
 using calc.Factories;
+using calc.Helpers;
 using calc.SingleArgumentCalculator;
+using calc.Sortes;
 using calc.TwoArgumentsCalculator;
 
 namespace calc
@@ -56,7 +58,16 @@ namespace calc
 
         public void ArraySortes(object sender, EventArgs e)
         {
+            string senderName = ((Button)sender).Name;
+            string sortName = senderName.Replace("SortButton", "");
 
+            string inputString = ValueOneInput.Text;
+            int[] arrayToSort = ArrayHelpers.StringToArray(inputString, ' ');
+
+            ISort ArraySort = ArraySortesFactory.CreateSort(sortName);
+
+            int[] sortedArray = ArraySort.Sort(arrayToSort);
+            OutputField.Text = ArrayHelpers.ArrayToString(sortedArray, ' ');
         }
 
 /*

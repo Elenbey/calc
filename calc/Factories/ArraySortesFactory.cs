@@ -3,7 +3,7 @@ using calc.Sortes;
 
 namespace calc.Factories
 {
-    public class ArraySortesFactory
+    public static class ArraySortesFactory
     {
         public static ISort CreateSort(string sortName)
         {
