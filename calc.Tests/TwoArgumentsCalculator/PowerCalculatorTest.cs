@@ -1,12 +1,23 @@
-﻿using System;
+﻿using NUnit.Framework;
 
 namespace calc.TwoArgumentsCalculator
 {
-    public class PowerCalculator:ITwoArgumentsCalculator
+    [TestFixture]
+    public class PowerCalculatorTest
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        [TestCase(0, 0, 1)]
+        [TestCase(3, 2, 9)]
+        [TestCase(-1, -2, 1)]
+        [TestCase(-1, 2, 1)]
+        [TestCase(1, -2, 1)]
+
+        public void CalculateTest(double valueOne, double valueTwo, double result)
         {
-            return Math.Pow(firstArgument,secondArgument);
+            var calculator = new PowerCalculator();
+            var testResult = calculator.Calculate(valueOne, valueTwo);
+
+
+            Assert.AreEqual(testResult, result);
         }
     }
 }

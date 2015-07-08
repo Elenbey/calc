@@ -1,10 +1,23 @@
-﻿namespace calc.TwoArgumentsCalculator
+﻿using NUnit.Framework;
+
+namespace calc.TwoArgumentsCalculator
 {
-    public class MultiplyCalculator : ITwoArgumentsCalculator
+    [TestFixture]
+    public class MultiplyCalculatorTest
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        [TestCase(0, 0, 0)]
+        [TestCase(3, 4, 12)]
+        [TestCase(-7, -2, 14)]
+        [TestCase(-7, 2, -14)]
+        [TestCase(7, -2, -14)]
+
+        public void CalculateTest(double valueOne, double valueTwo, double result)
         {
-            return firstArgument * secondArgument;
+            var calculator = new MultiplyCalculator();
+            var testResult = calculator.Calculate(valueOne, valueTwo);
+
+
+            Assert.AreEqual(testResult, result);
         }
     }
 }
