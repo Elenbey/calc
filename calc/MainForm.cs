@@ -7,8 +7,15 @@ using calc.TwoArgumentsCalculator;
 
 namespace calc
 {
+
     public partial class MainForm : Form
     {
+
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -46,9 +53,10 @@ namespace calc
 
             OutputField.Text = calculateResult.ToString();
         }
-        public MainForm()
+
+        public void ArraySortes(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
 
 /*

@@ -52,6 +52,10 @@ namespace calc
             this.TanButton = new System.Windows.Forms.Button();
             this.LogButton = new System.Windows.Forms.Button();
             this.SinhButton = new System.Windows.Forms.Button();
+            this.BubbleSortButton = new System.Windows.Forms.Button();
+            this.CocktailSortButton = new System.Windows.Forms.Button();
+            this.GnomeSortButton = new System.Windows.Forms.Button();
+            this.SelectionSortButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +74,7 @@ namespace calc
             // 
             this.ValueOneInput.Location = new System.Drawing.Point(125, 28);
             this.ValueOneInput.Name = "ValueOneInput";
-            this.ValueOneInput.Size = new System.Drawing.Size(189, 20);
+            this.ValueOneInput.Size = new System.Drawing.Size(224, 20);
             this.ValueOneInput.TabIndex = 1;
             this.ValueOneInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -78,7 +82,7 @@ namespace calc
             // 
             this.ValueTwoInput.Location = new System.Drawing.Point(125, 70);
             this.ValueTwoInput.Name = "ValueTwoInput";
-            this.ValueTwoInput.Size = new System.Drawing.Size(189, 20);
+            this.ValueTwoInput.Size = new System.Drawing.Size(224, 20);
             this.ValueTwoInput.TabIndex = 2;
             this.ValueTwoInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -87,7 +91,7 @@ namespace calc
             this.OutputLabel.AutoSize = true;
             this.OutputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OutputLabel.ForeColor = System.Drawing.Color.SteelBlue;
-            this.OutputLabel.Location = new System.Drawing.Point(8, 300);
+            this.OutputLabel.Location = new System.Drawing.Point(12, 282);
             this.OutputLabel.Name = "OutputLabel";
             this.OutputLabel.Size = new System.Drawing.Size(69, 20);
             this.OutputLabel.TabIndex = 3;
@@ -95,10 +99,10 @@ namespace calc
             // 
             // OutputField
             // 
-            this.OutputField.Location = new System.Drawing.Point(83, 300);
+            this.OutputField.Location = new System.Drawing.Point(87, 282);
             this.OutputField.Name = "OutputField";
             this.OutputField.ReadOnly = true;
-            this.OutputField.Size = new System.Drawing.Size(231, 20);
+            this.OutputField.Size = new System.Drawing.Size(262, 20);
             this.OutputField.TabIndex = 4;
             this.OutputField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -176,7 +180,7 @@ namespace calc
             // 
             this.CosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CosButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.CosButton.Location = new System.Drawing.Point(67, 212);
+            this.CosButton.Location = new System.Drawing.Point(298, 166);
             this.CosButton.Name = "CosButton";
             this.CosButton.Size = new System.Drawing.Size(51, 40);
             this.CosButton.TabIndex = 11;
@@ -188,7 +192,7 @@ namespace calc
             // 
             this.SinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SinButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.SinButton.Location = new System.Drawing.Point(12, 212);
+            this.SinButton.Location = new System.Drawing.Point(298, 120);
             this.SinButton.Name = "SinButton";
             this.SinButton.Size = new System.Drawing.Size(51, 40);
             this.SinButton.TabIndex = 12;
@@ -256,11 +260,59 @@ namespace calc
             this.SinhButton.UseVisualStyleBackColor = true;
             this.SinhButton.Click += new System.EventHandler(this.CalculateSingleArgument);
             // 
+            // BubbleSortButton
+            // 
+            this.BubbleSortButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BubbleSortButton.Location = new System.Drawing.Point(12, 225);
+            this.BubbleSortButton.Name = "BubbleSortButton";
+            this.BubbleSortButton.Size = new System.Drawing.Size(87, 39);
+            this.BubbleSortButton.TabIndex = 18;
+            this.BubbleSortButton.Text = "Bubble";
+            this.BubbleSortButton.UseVisualStyleBackColor = true;
+            this.BubbleSortButton.Click += new System.EventHandler(this.ArraySortes);
+            // 
+            // CocktailSortButton
+            // 
+            this.CocktailSortButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CocktailSortButton.Location = new System.Drawing.Point(105, 225);
+            this.CocktailSortButton.Name = "CocktailSortButton";
+            this.CocktailSortButton.Size = new System.Drawing.Size(79, 38);
+            this.CocktailSortButton.TabIndex = 19;
+            this.CocktailSortButton.Text = "Cocktail";
+            this.CocktailSortButton.UseVisualStyleBackColor = true;
+            this.CocktailSortButton.Click += new System.EventHandler(this.ArraySortes);
+            // 
+            // GnomeSortButton
+            // 
+            this.GnomeSortButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GnomeSortButton.Location = new System.Drawing.Point(190, 225);
+            this.GnomeSortButton.Name = "GnomeSortButton";
+            this.GnomeSortButton.Size = new System.Drawing.Size(77, 39);
+            this.GnomeSortButton.TabIndex = 20;
+            this.GnomeSortButton.Text = "Gnome";
+            this.GnomeSortButton.UseVisualStyleBackColor = true;
+            this.GnomeSortButton.Click += new System.EventHandler(this.ArraySortes);
+            // 
+            // SelectionSortButton
+            // 
+            this.SelectionSortButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.SelectionSortButton.Location = new System.Drawing.Point(273, 224);
+            this.SelectionSortButton.Name = "SelectionSortButton";
+            this.SelectionSortButton.Size = new System.Drawing.Size(76, 39);
+            this.SelectionSortButton.TabIndex = 21;
+            this.SelectionSortButton.Text = "Selection";
+            this.SelectionSortButton.UseVisualStyleBackColor = true;
+            this.SelectionSortButton.Click += new System.EventHandler(this.ArraySortes);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(323, 329);
+            this.ClientSize = new System.Drawing.Size(374, 311);
+            this.Controls.Add(this.SelectionSortButton);
+            this.Controls.Add(this.GnomeSortButton);
+            this.Controls.Add(this.CocktailSortButton);
+            this.Controls.Add(this.BubbleSortButton);
             this.Controls.Add(this.SinhButton);
             this.Controls.Add(this.LogButton);
             this.Controls.Add(this.TanButton);
@@ -309,6 +361,10 @@ namespace calc
         private Button TanButton;
         private Button LogButton;
         private Button SinhButton;
+        private Button BubbleSortButton;
+        private Button CocktailSortButton;
+        private Button GnomeSortButton;
+        private Button SelectionSortButton;
     }
 }
 
