@@ -2,6 +2,11 @@
 
 namespace calc.SingleArgumentCalculator
 {
+    /// <summary>
+    /// operation log
+    /// </summary>
+    
+
     public class LogCalculator : ISingleArgumentCalculator
     {
         public double Calculate(double argument)

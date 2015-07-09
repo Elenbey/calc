@@ -2,6 +2,11 @@
 
 namespace calc.SingleArgumentCalculator
 {
+    /// <summary>
+    /// operation tan
+    /// </summary>
+    
+
     public class TanCalculator : ISingleArgumentCalculator
     {
         public double Calculate(double argument)

@@ -3,6 +3,9 @@ using calc.TwoArgumentsCalculator;
 
 namespace calc.Factories
 {
+    /// <summary>
+    /// Factory for two arguments
+    /// </summary>
     public static class TwoArgumentsFactory
     {
         public static ITwoArgumentsCalculator CreateCalculator(string calculatorName)

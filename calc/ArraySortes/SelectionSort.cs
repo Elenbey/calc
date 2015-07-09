@@ -1,7 +1,15 @@
 ﻿namespace calc.Sortes
 {
+    /// <summary>
+    /// class for Selection sort
+    /// </summary>
     public class SelectionSort : ISort
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public double[] Sort(double[] array)
         {
             int posmin;

@@ -3,6 +3,9 @@ using calc.Sortes;
 
 namespace calc.Factories
 {
+    /// <summary>
+    /// Factory for sortes
+    /// </summary>
     public static class ArraySortesFactory
     {
         public static ISort CreateSort(string sortName)

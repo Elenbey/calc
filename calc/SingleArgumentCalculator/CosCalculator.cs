@@ -2,6 +2,9 @@
 
 namespace calc.SingleArgumentCalculator
 {
+    /// <summary>
+    /// operation cos
+    /// </summary>
     
     public class CosCalculator : ISingleArgumentCalculator
     {

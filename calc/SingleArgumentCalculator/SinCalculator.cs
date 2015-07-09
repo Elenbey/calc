@@ -2,6 +2,11 @@
 
 namespace calc.SingleArgumentCalculator
 {
+    /// <summary>
+    /// operation sin
+    /// </summary>
+    
+
     public class SinCalculator : ISingleArgumentCalculator
     {
         public double Calculate(double argument)

@@ -1,7 +1,15 @@
 ﻿namespace calc.Sortes
 {
+    /// <summary>
+    /// class for Gnome sort
+    /// </summary>
     public class GnomeSort : ISort
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public double[] Sort(double[] array)
         {
             double tempValue;

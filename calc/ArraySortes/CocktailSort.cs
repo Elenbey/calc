@@ -1,7 +1,15 @@
 ﻿namespace calc.Sortes
 {
+    /// <summary>
+    /// class for Cocktail sort
+    /// </summary>
     public class CocktailSort : ISort
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public double[] Sort(double[] array)
         {
             for (int i = 0; i < array.Length/2; i++)

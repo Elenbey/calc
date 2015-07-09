@@ -5,6 +5,11 @@ namespace calc.Validator
 {
     public static class MyValidator
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="inputString"></param>
+        /// <returns></returns>
         public static double ValidateAndConvertToDouble(string inputString)
         {
             double number;
@@ -19,6 +24,11 @@ namespace calc.Validator
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public static double[] ValidateAndConvertToArray(string input)
         {
             return ArrayHelpers.StringToArray(input, ',');

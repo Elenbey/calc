@@ -1,7 +1,15 @@
 ﻿namespace calc.Sortes
 {
+    /// <summary>
+    /// class for Bubble sort
+    /// </summary>
     public class BubbleSort : ISort
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public double[] Sort(double[] array)
         {
             int length = array.Length;

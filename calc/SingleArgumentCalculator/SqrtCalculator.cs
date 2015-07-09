@@ -2,6 +2,11 @@
 
 namespace calc.SingleArgumentCalculator
 {
+    /// <summary>
+    /// operation sqrt
+    /// </summary>
+    
+
     public class SqrtCalculator : ISingleArgumentCalculator
     {
         public double Calculate(double argument)

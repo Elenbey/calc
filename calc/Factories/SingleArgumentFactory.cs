@@ -3,6 +3,9 @@ using calc.SingleArgumentCalculator;
 
 namespace calc.Factories
 {
+    /// <summary>
+    /// Factory for single argument
+    /// </summary>
     public static class SingleArgumentFactory
     {
         public static ISingleArgumentCalculator CreateCalculator(string calculatorName)

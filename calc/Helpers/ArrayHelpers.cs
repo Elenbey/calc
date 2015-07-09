@@ -4,8 +4,17 @@ using calc.Validator;
 
 namespace calc.Helpers
 {
+    /// <summary>
+    /// class ArrayHelpers
+    /// </summary>
     public static class ArrayHelpers
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="toSplit"></param>
+        /// <param name="delimiter"></param>
+        /// <returns></returns>
         public static double[] StringToArray(string toSplit,char delimiter)
         {
             if (toSplit.Length == 0)
@@ -30,6 +39,12 @@ namespace calc.Helpers
             return result;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="array"></param>
+        /// <param name="delimiter"></param>
+        /// <returns></returns>
         public static String ArrayToString(double[] array, char delimiter)
         {
             if (array.Length == 0)

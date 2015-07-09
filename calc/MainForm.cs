@@ -18,9 +18,9 @@ namespace calc
         {
             InitializeComponent();
         }
-
+        
         /// <summary>
-        /// 
+        /// Handler for operations with two arguments
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -54,7 +54,7 @@ namespace calc
         }
 
         /// <summary>
-        /// 
+        /// Handler for operations with single  argument
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -96,7 +96,11 @@ namespace calc
                 MessageBox.Show(err.Message, "Error");
             }
         }
-
+        /// <summary>
+        /// Handler for operations with array (sortes)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ArraySortes(object sender, EventArgs e)
         {
             try
@@ -118,7 +122,11 @@ namespace calc
             }
         }
 
-
+        /// <summary>
+        /// Control input numbers
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void ValueOneInputKeyPress(object sender, KeyPressEventArgs e)
         {
