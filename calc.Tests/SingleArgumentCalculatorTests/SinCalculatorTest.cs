@@ -17,7 +17,7 @@ namespace calc.Tests.SingleArgumentCalculatorTests
             var calculator = new SinCalculator();
             var testResult = calculator.Calculate(argument);
 
-            Assert.AreEqual(testResult, result, accuracy);
+            Assert.AreEqual(result, testResult, accuracy);
 
         }
     }

@@ -16,7 +16,7 @@ namespace calc.Tests.TwoArgumentsCalculatorTests
             var testResult = calculator.Calculate(valueOne, valueTwo);
 
 
-            Assert.AreEqual(testResult, result);
+            Assert.AreEqual(result, testResult);
         }
     }
 }

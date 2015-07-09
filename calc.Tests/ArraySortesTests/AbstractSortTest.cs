@@ -17,7 +17,7 @@ namespace calc.Tests.ArraySortesTests
         public void SortTest(double[] arrayToSort, double[] result)
         {
             var testResult = Sorter.Sort(arrayToSort);
-            Assert.AreEqual(testResult, result);
+            Assert.AreEqual(result, testResult);
         }
     }
 }

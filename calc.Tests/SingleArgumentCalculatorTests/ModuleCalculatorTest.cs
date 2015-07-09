@@ -13,9 +13,9 @@ namespace calc.Tests.SingleArgumentCalculatorTests
         {
             var calculator = new ModuleCalculator();
             var testResult = calculator.Calculate(argument);
-            
 
-            Assert.AreEqual(testResult,result);
+
+            Assert.AreEqual(result, testResult);
         }
     }
 }

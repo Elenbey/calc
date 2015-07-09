@@ -18,7 +18,7 @@ namespace calc.Tests.FactoriesTests
         {
             var calculator = TwoArgumentsFactory.CreateCalculator(calculatorName);
 
-            Assert.AreEqual(calculator.GetType(), expectedCalculator);
+            Assert.AreEqual(expectedCalculator, calculator.GetType());
 
         }
 

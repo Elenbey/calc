@@ -21,7 +21,7 @@ namespace calc.Tests.SingleArgumentCalculatorTests
             var calculator = new TanCalculator();
             var testResult = calculator.Calculate(argument);
 
-            Assert.AreEqual(testResult, result, accuracy);
+            Assert.AreEqual(result, testResult, accuracy);
 
         }
 

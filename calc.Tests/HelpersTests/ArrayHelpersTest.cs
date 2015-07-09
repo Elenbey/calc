@@ -14,7 +14,7 @@ namespace calc.Helpers
         {
 
             var testResult = ArrayHelpers.StringToArray(toSplit, delimiter);
-            Assert.AreEqual(testResult, result);
+            Assert.AreEqual(result, testResult);
         }
 
         [TestCase(new double[] {1, 2, 3, 4, 5}, ',', "1,2,3,4,5")]
@@ -22,7 +22,7 @@ namespace calc.Helpers
         public void ArrayToStringTest(double[] array, char delimiter, string result)
         {
             var testResult = ArrayHelpers.ArrayToString(array, delimiter);
-            Assert.AreEqual(testResult, result);
+            Assert.AreEqual(result, testResult);
 
         }
 
