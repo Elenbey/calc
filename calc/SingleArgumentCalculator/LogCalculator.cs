@@ -7,9 +7,9 @@ namespace calc.SingleArgumentCalculator
         public double Calculate(double argument)
         {
             if(argument == 0)
-                throw new Exception("LogNull");
+                throw new Exception("The log of zero does not exist");
             if (argument < 0)
-                throw new Exception("LogNegative");
+                throw new Exception("The log of negative number does not exist");
             return Math.Log10(argument);
         }
     }

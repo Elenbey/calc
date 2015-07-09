@@ -26,23 +26,31 @@ namespace calc
         /// <param name="e"></param>
         public void CalculateTwoArguments(object sender, EventArgs e)
         {
-            string InputOne = ValueOneInput.Text;
-            string InputTwo = ValueTwoInput.Text;
-
-            if (InputOne.Length == 0 || InputTwo.Length == 0)
+            try
             {
-                throw new Exception("Argument missing");
+                string InputOne = ValueOneInput.Text;
+                string InputTwo = ValueTwoInput.Text;
+
+                if (InputOne.Length == 0 || InputTwo.Length == 0)
+                {
+                    throw new Exception("Argument missing");
+                }
+
+                string senderName = ((Button) sender).Name;
+                string operationName = senderName.Replace("Button", "");
+
+                double firstValue = MyValidator.ValidateAndConvertToDouble(ValueOneInput.Text);
+                double secondValue = MyValidator.ValidateAndConvertToDouble(ValueTwoInput.Text);
+
+                ITwoArgumentsCalculator Calculator = TwoArgumentsFactory.CreateCalculator(operationName);
+                var calculateResult = Calculator.Calculate(firstValue, secondValue);
+
+                OutputField.Text = calculateResult.ToString();
             }
-
-            string senderName = ((Button) sender).Name;
-            string operationName = senderName.Replace("Button", "");
-
-            double firstValue = _Validator.ValidateAndConvertToDouble(ValueOneInput.Text);
-            double secondValue = _Validator.ValidateAndConvertToDouble(ValueTwoInput.Text);
-
-            ITwoArgumentsCalculator Calculator = TwoArgumentsFactory.CreateCalculator(operationName);
-            var calculateResult = Calculator.Calculate(firstValue,secondValue);
-            OutputField.Text = calculateResult.ToString();
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message, "Error");
+            }
         }
 
         /// <summary>
@@ -52,47 +60,62 @@ namespace calc
         /// <param name="e"></param>
         public void CalculateSingleArgument(object sender, EventArgs e)
         {
-            string InputOne = ValueOneInput.Text;
-            string InputTwo = ValueTwoInput.Text;
-            double inputValue;
-
-            if (InputOne.Length == 0)
+            try
             {
-                if (InputTwo.Length != 0)
+                string InputOne = ValueOneInput.Text;
+                string InputTwo = ValueTwoInput.Text;
+                double inputValue;
+
+                if (InputOne.Length == 0)
                 {
-                    inputValue = Convert.ToDouble(InputTwo);
+                    if (InputTwo.Length == 0)
+                    {
+                        throw new Exception("Argument missing");
+                        inputValue = Convert.ToDouble(InputTwo);
+                    }
+                    else
+                    {
+                        inputValue = Convert.ToDouble(InputTwo);
+                    }
                 }
                 else
                 {
-                    throw new Exception("Argument missing");
+                    inputValue = Convert.ToDouble(InputOne);
                 }
+
+                string senderName = ((Button) sender).Name;
+                string operationName = senderName.Replace("Button", "");
+
+                ISingleArgumentCalculator Calculator = SingleArgumentFactory.CreateCalculator(operationName);
+                var calculateResult = Calculator.Calculate(inputValue);
+
+                OutputField.Text = calculateResult.ToString();
             }
-            else
+            catch(Exception err)
             {
-                inputValue = Convert.ToDouble(InputOne); 
+                MessageBox.Show(err.Message, "Error");
             }
-
-            string senderName = ((Button)sender).Name;
-            string operationName = senderName.Replace("Button", "");
-
-             ISingleArgumentCalculator Calculator = SingleArgumentFactory.CreateCalculator(operationName);
-            var calculateResult = Calculator.Calculate(inputValue);
-
-            OutputField.Text = calculateResult.ToString();
         }
 
         public void ArraySortes(object sender, EventArgs e)
         {
-            string senderName = ((Button)sender).Name;
-            string sortName = senderName.Replace("SortButton", "");
+            try
+            {
+                string senderName = ((Button) sender).Name;
+                string sortName = senderName.Replace("SortButton", "");
 
-            string inputString = ValueOneInput.Text;
-            double[] arrayToSort = ArrayHelpers.StringToArray(inputString, ' ');
+                string inputString = ValueOneInput.Text;
+                double[] arrayToSort = MyValidator.ValidateAndConvertToArray(inputString);
 
-            ISort ArraySort = ArraySortesFactory.CreateSort(sortName);
+                ISort ArraySort = ArraySortesFactory.CreateSort(sortName);
 
-            double[] sortedArray = ArraySort.Sort(arrayToSort);
-            OutputField.Text = ArrayHelpers.ArrayToString(sortedArray, ' ');
+                double[] sortedArray = ArraySort.Sort(arrayToSort);
+                OutputField.Text = ArrayHelpers.ArrayToString(sortedArray, ' ');
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.Message, "Error");
+            }
         }
 
 

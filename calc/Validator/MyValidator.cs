@@ -1,8 +1,9 @@
 ﻿using System;
+using calc.Helpers;
 
 namespace calc.Validator
 {
-    public static class _Validator
+    public static class MyValidator
     {
         public static double ValidateAndConvertToDouble(string inputString)
         {
@@ -18,9 +19,9 @@ namespace calc.Validator
             }
         }
 
-        public static bool ValidateString()
+        public static double[] ValidateAndConvertToArray(string input)
         {
-            return false;
+            return ArrayHelpers.StringToArray(input, ',');
         }
     }
 }

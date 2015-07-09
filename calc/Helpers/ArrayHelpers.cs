@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using calc.Validator;
 
 namespace calc.Helpers
 {
@@ -9,7 +10,7 @@ namespace calc.Helpers
         {
             if (toSplit.Length == 0)
             {
-                throw new Exception("sent an empty string");
+                throw new Exception("Sent an empty string");
             }
             
             string[] stringItems = toSplit.Split(delimiter);
@@ -21,10 +22,10 @@ namespace calc.Helpers
 
                 if (item.Length == 0)
                 {
-                    throw new Exception("sent an crushed string");
+                    throw new Exception("Sent an crushed string");
                 }
 
-                result[i] = Convert.ToDouble(item);
+                result[i] = MyValidator.ValidateAndConvertToDouble(item);
             }
             return result;
         }
@@ -33,7 +34,7 @@ namespace calc.Helpers
         {
             if (array.Length == 0)
             {
-                throw new Exception("sent an empty array");
+                throw new Exception("Sent an empty array");
             }
             String result = "";
 

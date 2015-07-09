@@ -75,7 +75,7 @@
     <Compile Include="TwoArgumentsCalculator\MultiplyCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\PowerCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\SubtractionCalculator.cs" />
-    <Compile Include="Validator\_Validator.cs" />
+    <Compile Include="Validator\MyValidator.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -42,7 +42,7 @@ namespace calc
             this.MultiplyButton = new System.Windows.Forms.Button();
             this.DivisionButton = new System.Windows.Forms.Button();
             this.AdditionButton = new System.Windows.Forms.Button();
-            this.SubstractionButton = new System.Windows.Forms.Button();
+            this.SubtractionButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ModuleButton = new System.Windows.Forms.Button();
             this.CosButton = new System.Windows.Forms.Button();
@@ -144,17 +144,17 @@ namespace calc
             this.AdditionButton.UseVisualStyleBackColor = true;
             this.AdditionButton.Click += new System.EventHandler(this.CalculateTwoArguments);
             // 
-            // SubstractionButton
+            // SubtractionButton
             // 
-            this.SubstractionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubstractionButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.SubstractionButton.Location = new System.Drawing.Point(67, 120);
-            this.SubstractionButton.Name = "SubstractionButton";
-            this.SubstractionButton.Size = new System.Drawing.Size(51, 40);
-            this.SubstractionButton.TabIndex = 8;
-            this.SubstractionButton.Text = "-";
-            this.SubstractionButton.UseVisualStyleBackColor = true;
-            this.SubstractionButton.Click += new System.EventHandler(this.CalculateTwoArguments);
+            this.SubtractionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubtractionButton.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.SubtractionButton.Location = new System.Drawing.Point(67, 120);
+            this.SubtractionButton.Name = "SubtractionButton";
+            this.SubtractionButton.Size = new System.Drawing.Size(51, 40);
+            this.SubtractionButton.TabIndex = 8;
+            this.SubtractionButton.Text = "-";
+            this.SubtractionButton.UseVisualStyleBackColor = true;
+            this.SubtractionButton.Click += new System.EventHandler(this.CalculateTwoArguments);
             // 
             // pictureBox1
             // 
@@ -324,7 +324,7 @@ namespace calc
             this.Controls.Add(this.CosButton);
             this.Controls.Add(this.ModuleButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.SubstractionButton);
+            this.Controls.Add(this.SubtractionButton);
             this.Controls.Add(this.AdditionButton);
             this.Controls.Add(this.DivisionButton);
             this.Controls.Add(this.MultiplyButton);
@@ -353,7 +353,7 @@ namespace calc
         private Button MultiplyButton;
         private Button DivisionButton;
         private Button AdditionButton;
-        private Button SubstractionButton;
+        private Button SubtractionButton;
         private PictureBox pictureBox1;
         private Button ModuleButton;
         private Button CosButton;
