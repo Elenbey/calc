@@ -2,9 +2,9 @@
 {
     public class GnomeSort : ISort
     {
-        public int[] Sort(int[] array)
+        public double[] Sort(double[] array)
         {
-            int tempValue;
+            double tempValue;
             for (int i = 1; i < array.Length; )
             {
                 if (array[i - 1] <= array[i])

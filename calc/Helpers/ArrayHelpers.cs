@@ -5,7 +5,7 @@ namespace calc.Helpers
 {
     public static class ArrayHelpers
     {
-        public static int[] StringToArray(string toSplit,char delimiter)
+        public static double[] StringToArray(string toSplit,char delimiter)
         {
             if (toSplit.Length == 0)
             {
@@ -13,7 +13,7 @@ namespace calc.Helpers
             }
             
             string[] stringItems = toSplit.Split(delimiter);
-            int[] result = new int[stringItems.Length];
+            double[] result = new double[stringItems.Length];
 
             for (int i = 0; i < stringItems.Length; i++)
             {
@@ -24,12 +24,12 @@ namespace calc.Helpers
                     throw new Exception("sent an crushed string");
                 }
 
-                result[i] = Convert.ToInt32(item);
+                result[i] = Convert.ToDouble(item);
             }
             return result;
         }
 
-        public static String ArrayToString(int[] array, char delimiter)
+        public static String ArrayToString(double[] array, char delimiter)
         {
             if (array.Length == 0)
             {

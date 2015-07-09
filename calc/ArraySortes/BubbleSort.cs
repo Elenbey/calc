@@ -2,10 +2,10 @@
 {
     public class BubbleSort : ISort
     {
-        public int[] Sort(int[] array)
+        public double[] Sort(double[] array)
         {
             int length = array.Length;
-            int temp = array[0];
+            double temp = array[0];
             for (int i = 0; i < length; i++)
             {
                 for (int j = i + 1; j < length; j++)

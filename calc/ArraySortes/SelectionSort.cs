@@ -2,9 +2,10 @@
 {
     public class SelectionSort : ISort
     {
-        public int[] Sort(int[] array)
+        public double[] Sort(double[] array)
         {
-            int posmin, temp;
+            int posmin;
+            double temp;
 
             for (int i = 0; i < array.Length - 1; i++)
             {

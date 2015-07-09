@@ -2,6 +2,6 @@
 {
     public interface ISort
     {
-        int[] Sort(int[] array);
+        double[] Sort(double[] array);
     }
 }

@@ -64,11 +64,11 @@
     <Compile Include="SingleArgumentCalculator\SinhCalculator.cs" />
     <Compile Include="SingleArgumentCalculator\SqrtCalculator.cs" />
     <Compile Include="SingleArgumentCalculator\TanCalculator.cs" />
-    <Compile Include="Sortes\BubbleSort.cs" />
-    <Compile Include="Sortes\CocktailSort.cs" />
-    <Compile Include="Sortes\GnomeSort.cs" />
-    <Compile Include="Sortes\ISort.cs" />
-    <Compile Include="Sortes\SelectionSort.cs" />
+    <Compile Include="ArraySortes\BubbleSort.cs" />
+    <Compile Include="ArraySortes\CocktailSort.cs" />
+    <Compile Include="ArraySortes\GnomeSort.cs" />
+    <Compile Include="ArraySortes\ISort.cs" />
+    <Compile Include="ArraySortes\SelectionSort.cs" />
     <Compile Include="TwoArgumentsCalculator\AdditionCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\DivisionCalculator.cs" />
     <Compile Include="TwoArgumentsCalculator\ITwoArgumentsCalculator.cs" />

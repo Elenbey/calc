@@ -62,11 +62,11 @@ namespace calc
             string sortName = senderName.Replace("SortButton", "");
 
             string inputString = ValueOneInput.Text;
-            int[] arrayToSort = ArrayHelpers.StringToArray(inputString, ' ');
+            double[] arrayToSort = ArrayHelpers.StringToArray(inputString, ' ');
 
             ISort ArraySort = ArraySortesFactory.CreateSort(sortName);
 
-            int[] sortedArray = ArraySort.Sort(arrayToSort);
+            double[] sortedArray = ArraySort.Sort(arrayToSort);
             OutputField.Text = ArrayHelpers.ArrayToString(sortedArray, ' ');
         }
 

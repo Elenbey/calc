@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraySortesTests\AbstractSortTest.cs" />
+    <Compile Include="ArraySortesTests\BubbleSortTest.cs" />
+    <Compile Include="ArraySortesTests\CocktailSortTest.cs" />
+    <Compile Include="ArraySortesTests\GnomeSortesTest.cs" />
+    <Compile Include="ArraySortesTests\SelectionSortTest.cs" />
     <Compile Include="FactoriesTests\SingleArgumentFactoryTest.cs" />
     <Compile Include="FactoriesTests\TwoArgumentsFactoryTest.cs" />
     <Compile Include="HelpersTests\ArrayHelpersTest.cs" />
