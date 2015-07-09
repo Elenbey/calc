@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="FactoriesTests\SingleArgumentFactoryTest.cs" />
     <Compile Include="FactoriesTests\TwoArgumentsFactoryTest.cs" />
+    <Compile Include="HelpersTests\ArrayHelpersTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SingleArgumentCalculatorTests\CosCalculatorTest.cs" />
     <Compile Include="SingleArgumentCalculatorTests\LogCalculatorTest.cs" />
